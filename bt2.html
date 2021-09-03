@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 2, bài tập 2</title>
+</head>
+<body>
+<h1>Tính diện tích và chu vi hình tròn:</h1>
+<label for="inpuntR">Enter circle radius: <input type="number" id="inpuntR"></label><br>
+<button onclick="displayCircumferences()">Cal Circumferences</button>
+<button onclick="displayArea()">Cal Area</button><br>
+<p id="result"></p>
+<script>
+    function calCircumference(r) {
+        let circum = r * 2 * 3.14;
+        return circum;
+    }
+
+    function calArea(r) {
+        let area = r * r * 3.14;
+        return area;
+    }
+
+    function displayCircumferences() {
+        let result = calCircumference(parseFloat(document.getElementById("inpuntR").value));
+        document.getElementById("result").innerText = "Circumferences is: " + result;
+    }
+
+    function displayArea() {
+        let result = calArea(parseFloat(document.getElementById("inpuntR").value));
+        document.getElementById("result").innerText = "Area is: " + result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 2, bài tập 7</title>
+</head>
+<body>
+<h1>Đổi chỗ hai số nguyên bất kì nhập vào:</h1>
+<!--<label><input id="number1" type="number" placeholder="Enter number 1"></label>-->
+<!--<label><input id="number2" type="number" placeholder="Enter number 2"></label><br>-->
+<!--<button onclick="displayChange()">Change</button>-->
+
+<script>
+    function swapNumber(a, b) {
+        let c = a;
+        a = b;
+        b = c;
+        let array = [];
+        array.push(a);
+        array.push(b);
+        return array
+    }
+
+    function displayChange() {
+        let num1 = prompt("Enter first number");
+        let num2 = prompt("Enter second number");
+        let result = swapNumber(num1, num2);
+        document.write(result)
+    }
+
+    displayChange()
+</script>
+</body>
+</html>

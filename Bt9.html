@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập Hàm 2, bài tập 9:</title>
+</head>
+<body>
+<h1>Kiểm tra kí tự bất kì có trong mảng không</h1>
+<script>
+    function addNumberToArray(arr) {
+        let sizeArray;
+        do {
+            sizeArray = prompt("Enter your size u want babe")
+        } while (sizeArray < 0);
+
+        for (let i = 0; i < sizeArray; i++) {
+            arr[i] = prompt("Enter the index " + i + " :")
+        }
+        return arr;
+    }
+
+    function checkWord(a, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let check = false
+            if (a === arr[i]) {
+                check = true;
+                return check;
+            }
+        }
+        return false;
+    }
+
+    function displayCheck() {
+        let array = [];
+        array = addNumberToArray(array);
+        let word = prompt('word');
+        if (checkWord(word, array)) {
+            alert("Kí tự nằm trong mảng")
+        } else {
+            alert("Kí tự không nằm trong mảng")
+        }
+    }
+    displayCheck()
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tâp Hàm 2, bài tập 8</title>
+</head>
+<body>
+<h1>Truyền vào mảng số nguyên bất kì sau đó đảo ngược mảng số nguyên đó</h1>
+<script>
+    function addNumberToArray(arr) {
+            let sizeArray;
+            do {
+                sizeArray = prompt("Enter your size u want babe")
+            } while (sizeArray < 0);
+
+            for (let i = 0; i < sizeArray; i++) {
+                arr[i] = prompt("Enter the index " + i + " :")
+            }
+            return arr;
+        }
+
+    function reverserArray(arr) {
+        let first = 0;
+        let last = arr.length - 1
+        for (let i = 0; first < last; i++) {
+            let temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
+        return arr;
+    }
+    let array = [];
+    array = addNumberToArray(array);
+    document.write("Mảng mới là: " + reverserArray(array));
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 2, bài tập 1</title>
+</head>
+<body>
+<h1>Tính bình phương một số bất kì được nhập vào</h1>
+<label for="inputNumber">Enter number: <input id="inputNumber" type="number"></label><br>
+<button onclick="displaySquare()">Calculator</button>
+<script>
+    function mathSquare(a) {
+        let square = a * a;
+        return square;
+    }
+
+    function displaySquare() {
+        let result = mathSquare(document.getElementById("inputNumber").value);
+        alert(result)
+    }
+
+
+</script>
+</body>
+</html>
